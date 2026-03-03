@@ -23,7 +23,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 15px;
     line-height: 1.7;
     overflow-x: hidden;
@@ -987,14 +987,14 @@
         <div class="contact-icon">📧</div>
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-value"><a href="/cdn-cgi/l/email-protection#2950465c5b694c44484045074a4644"><span class="__cf_email__" data-cfemail="057c6a7077456068646c692b666a68">[email&#160;protected]</span></a></div>
+          <div class="contact-value"><a href="mailto:akankshajureddy0814@gmail.com">akankshajureddy0814@gmail.com</a></div>
         </div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">💼</div>
         <div>
           <div class="contact-label">LinkedIn</div>
-          <div class="contact-value"><a href="#"> linkedin.com/in/akanksha-jureddy</a></div>
+          <div class="contact-value"><a href="#">linkedin.com/in/akanksha-jureddy</a></div>
         </div>
       </div>
       <div class="contact-item">
@@ -1015,7 +1015,7 @@
     <div class="contact-form fade-in">
       <div class="form-group">
         <label class="form-label">Name</label>
-        <input type="text" class="form-input" placeholder="Akanksha Jureddy"/>
+        <input type="text" class="form-input" placeholder="Your name"/>
       </div>
       <div class="form-group">
         <label class="form-label">Email</label>
@@ -1041,7 +1041,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1058,4 +1058,12 @@
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
-      if (window.scro
+      if (window.scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
+    });
+  });
+</script>
+</body>
+</html>
